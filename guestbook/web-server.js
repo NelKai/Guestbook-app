@@ -6,10 +6,6 @@ var bodyParser = require("body-parser");
 
 app.use(bodyParser.urlencoded({extended: true}));
 
-//app.use(express.static("./guestbookSite"));
-
-var messages = [];
-
 
 app.get("/", function(request, response) {
     response.sendFile(__dirname + "\\index.html");
@@ -60,10 +56,6 @@ app.post("/mymessage", function(request, response) {
 
 app.get("/ajaxmessage", function(request, response) {
     response.sendFile(__dirname + "\\ajaxmessage.html");
-});
-
-app.post("/api/lisaa", function(request, response) {
-    response.send("Lisätään uusi viesti: '" + request.body.message + "' (" + request.body.username + ")");
 });
 
 app.get("*", function(request, response) {
