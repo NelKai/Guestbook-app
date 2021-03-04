@@ -2,7 +2,7 @@
   "name": "guestbook-app",
   "version": "1.0.0",
   "description": "",
-  "main": "web-server.js",
+  "main": "index.js",
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
@@ -11,7 +11,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node web-server.js"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
